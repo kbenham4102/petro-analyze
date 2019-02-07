@@ -10,7 +10,9 @@ Requirements:
 <br> To see all arguments in syntax run ```$ python compound_id.py -h``` for the help menu.
 <br> Here is the syntax to generate all plots for the example datafiles given:
 ```
-python compound_id.py -data srm_example.csv --w 1 --err_plots 1 --dbe_plots 1 --class_plots 1 --comp_data srm_ani_example.csv --comp_keep_class HC,N,O,O2 --keep_class HC,N,O,O2  
+python compound_id.py -data YourDataFile.csv --w 1 --err_plots 1 --dbe_plots 1 --class_plots 1 --keep_class HC,N,O,O2 --comp_data ComparisonDataFile.csv --comp_keep_class HC,N,O,O2 
+
+
 ```
 
 ## For Development...
