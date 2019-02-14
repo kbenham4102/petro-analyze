@@ -88,7 +88,7 @@ def plot_ppm_error(measured, reference, file, bins = 10, save = False):
     plt.gcf().subplots_adjust(bottom=0.15)
     if save == True:
         save_path = 'hist_' + file.split('.')[0] + '.png'
-        plt.savefig(save_path, dpi = 1200)
+        plt.savefig(save_path, dpi = 1200, bbox_inches = 'tight')
         print("Histogram saved as " + save_path)
     rms_err = np.sqrt((np.sum(errors**2))/len(errors))
     sdev_err = np.std(errors)
@@ -107,7 +107,7 @@ def plot_scatter_ppm(measured, errors, file):
     plt.xlim((np.min(measured) - 10.0, np.max(measured) + 10.0))
     plt.gcf().subplots_adjust(bottom=0.15, left = 0.15 )
     save_path = 'scatter_' + file.split('.')[0] + '.png'
-    plt.savefig(save_path, dpi = 1200)
+    plt.savefig(save_path, dpi = 1200, bbox_inches = 'tight')
     print("Scatter plot saved as " + save_path)
 
 def plot_DBEvC(df, carbon_nums, file):
@@ -125,7 +125,7 @@ def plot_DBEvC(df, carbon_nums, file):
     cb = plt.colorbar(shrink = 1, pad = 0.025)
     cb.set_label('Occurrence', fontsize = 'x-large')
     dbe_path = 'DBEvsC_' + file.split('.')[0] + '.png'
-    plt.savefig(dbe_path, dpi = 1200)
+    plt.savefig(dbe_path, dpi = 1200, bbox_inches = 'tight')
     print("DBE vs C plot saved as " + dbe_path)
     
 def new_ticks(given_locs, edges):
@@ -153,7 +153,7 @@ def smooth_hist2d(x, y, file, s=2, bins=[100,100]):
     cb.set_label('Rel. Abundance', fontsize = 'x-large')
     blur_path = 'DBEvsC_Blur' + file.split('.')[0] + '.png'
     #cb.set_label('Occurrence', fontsize = 'x-large')
-    plt.savefig(blur_path, dpi = 1200)
+    plt.savefig(blur_path, dpi = 1200, bbox_inches = 'tight')
     print('Gaussian blur saved as ' + blur_path)
     return None
 
@@ -228,7 +228,7 @@ def plot_class_dist(abund_bins, labels, file):
     ax.set_xticklabels(list(labels))
     plt.gcf().subplots_adjust(bottom=0.30)
     plt.gcf().subplots_adjust(left=0.30)
-    plt.savefig('classdist_' + file.split('.')[0] + '.png', dpi = 1200)
+    plt.savefig('classdist_' + file.split('.')[0] + '.png', dpi = 1200, bbox_inches = 'tight')
 
 def reduce_classes(labels, abunds, keep_list):
     new_labels = []
@@ -355,5 +355,5 @@ if __name__ == "__main__":
         ax.legend((rects1[0], rects2[0]), ('Toluene', 'Anisole'))
 
         class_comp_path = 'classdist_COMP_' + file.split('.')[0] + '_' + file2.split('.')[0] + '.png'
-        plt.savefig(class_comp_path, dpi = 1200)
+        plt.savefig(class_comp_path, dpi = 1200, bbox_inches = 'tight')
         print("Comparison of class distribution figure saved as "+class_comp_path)
