@@ -298,12 +298,12 @@ if __name__ == "__main__":
         plot_DBEvC(dfmzs, carbon_nums, file)
         smooth_hist2d(carbon_nums, dbe, file)
 
-    # Taken from Smith et al. 2018 DOI: 10.1021/acs.analchem.7b04159
+    # Taken from Smith et al. 2018 DOI: 10.1021/acs.analchem.7b04159 with extra sulfur classes
     class_list1 = ['HC', 'N', 'NO','NO2','NO3','NO4','NO5','NOS', 
               'NO2S', 'NO3S', 'NO4S', 'NOS2', 'NS', 'NS2',
              'N2', 'N2O', 'N2O2', 'N2S', 'N2OS', 'OS', 'O2S', 
               'O3S', 'O4S', 'O5S', 'OS2', 'O2S2', 'O3S2', 'O4S2', 
-              'O', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7' ]
+              'O', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'S', 'S2']
         
     formulas = np.array(dfmzs['Ion Formula'])
     abund_bins, labels = determine_class_abund(formulas, intensity, class_list1)
