@@ -15,7 +15,7 @@ python compound_id.py -data YourDataFile.csv --w 1 --err_plots 1 --dbe_plots 1 -
 
 ```
 ## Note On Class Distribution Plots
-The class distribution plots are generated based on a standard list ```class_list``` in the code. You can use the interactive notebook to figure out which classes are most abundant and edit the list manually. This could be an added feature in the fututure to automatically generate plots for standard lists and most abundant classes.
+The class distribution plots are generated based on a standard list ```class_list``` in the code. You can use the interactive notebook to figure out which classes are most abundant and edit the list manually. This could be an added feature in the fututure to automatically generate plots for standard lists and most abundant classes. This is how some extensive plots and edited plots (i.e. specific labels, label sizes, label orientations for publication) are generated. Requires some python knowledge. 
 
 ## For Development...
 Also included is the ipython notebook ```compound_id.ipynb``` where you can develop new plots with interactively in Jupyter. Examples used in the current program can be found here.
